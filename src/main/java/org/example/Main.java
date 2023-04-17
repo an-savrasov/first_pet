@@ -8,13 +8,9 @@ import com.pengrad.telegrambot.response.SendResponse;
 
 public class Main {
     public static void main(String[] args) {
-        // Create your bot passing the token received from @BotFather
-        TelegramBot bot = new TelegramBot("5555375819:AAH9XxsvYzAQX29vFMJKX_u4RnK65oQL3mA");
+        TelegramBot bot = new TelegramBot("5555");
 
-// Register for updates
         bot.setUpdatesListener(updates -> {
-            // ... process updates
-            // return id of last processed update or confirm them all
             for (int i = 0; i < updates.size(); i++) {
                 Update update = updates.get(i);
                 System.out.println(update.message().text());
