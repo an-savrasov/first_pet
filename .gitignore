@@ -38,5 +38,9 @@ build/
 ### VS Code ###
 .vscode/
 
+### Token ###
+/src/main/resources/config.properties
+
 ### Mac OS ###
 .DS_Store
+/.gradle/
