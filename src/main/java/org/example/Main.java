@@ -7,9 +7,12 @@ import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.response.SendResponse;
 
 public class Main {
-    public static void main(String[] args) {
-        TelegramBot bot = new TelegramBot("5555375819:AAH9XxsvYzAQX29vFMJKX_u4RnK65oQL3mA");
+    static Token token = new Token();
+    public static final String token1 = token.getToken();
+    public static void main (String[] args) {
 
+
+        TelegramBot bot = new TelegramBot(token1);
 
         bot.setUpdatesListener(updates -> {
             for (int i = 0; i < updates.size(); i++) {
@@ -19,9 +22,10 @@ public class Main {
                 SendResponse response = bot.execute(new SendMessage(chatId, update.message().text()));
             }
             return UpdatesListener.CONFIRMED_UPDATES_ALL;
+
+
+
         });
-
-
-
     }
+
 }
